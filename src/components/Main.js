@@ -50,7 +50,7 @@ const Main = () => {
                 *   만약 App.js에서 수행한다면 currentPath를 삭제하고
                 *   window.location.href로 설정
                 */
-                const currentPath = window.location.href.replace('/main', '');
+                const currentPath = window.location.origin;
                 const yolov8 = await tf.loadGraphModel(
                     `${currentPath}/${modelName}_web_model/model.json`,
                     {
